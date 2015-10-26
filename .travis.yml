@@ -1,26 +1,21 @@
 language: java
 jdk:
-  - oraclejdk8
-  - oraclejdk7
-  - openjdk7
-
+- oraclejdk8
+- oraclejdk7
+- openjdk7
 env:
   global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "IVWuiy6I8AJNFN5lbL+FicAX6AuIUyB8Is+vgUUtrr8OBy/nM3lMIy9iQKUCmHQ7Cy0Pdb8E35jSWd085ytLdqXfpMc4BmXv07e1KK7xaYISTrNXXHmANTAqQmjE5q5D/EirXK6E4BuaW911eWKBX5cn3yyfQyyMWB3NAGpnQuY4pGwmYk5nNpYYTlVct7cKvDipOEpbiIEaSeJ/bzXij2l4CAvcMYOO/3RyeTAQrKzDdCl1RgCerG56GbBemJ44TqRwoIl7/Yvopzuu7oi6gY13UPWXJYDQQNhFLS8IHYdn9g0gP+9cvfZdDyGatmjEjH3sB63Dt7NAvKedLeNGaDhqrVl1HARnADgNuPb0w//R1nEzWw3dEqlKIYZb+TY36/eaENey/AphzrozqxKaVceco51E3rjcuJ8UXRLp0sSEo1Mx2aMR/f/eDqnMHS185aGpys0FHBt0y98N7ze2cgV98oc7YT8waVj6ByNHqmTfpb8WkI0kpmDbsSFPImPfpVBNUi2rtT8/oARpihCYl42bf2MmmnLyKbqUwIAsMUykObQK1UvsCSHeKeD3hiVUq8sjPds59bwo83WCUtOn+qkt5tfkVe4X4/l6L3GOezDxOMvIIWsHEU8ABKtsd+wiFb0Nc2HUqDPfv2LlBSGCX+H8Mixe8rQlkma8z6joVOY="
-
+    secure: u1kjl2PMWkDPmOpecNjZ4VJu4ctadcgpV8mgfU3m8yVzQ0HGlkQyN8VbMDd703tnVrvKqYRPLXHWdde64knaxCi5BGK/g3yPw8xBrNyXW7vJ1QfbhJeQNXlnfNfThmcZPL9kt+3UNlqJylzKuALitS/k4Yq+BJK27oswfG2jpWd0P+LpsGpz5o2p1QMJlMMJ/JsYceRAw07KJmK8iwHEtGh9WfDA/XiYrE9laknCYg4+G52XAjuPPtJqaFTqXHr0wUMGCOEoYlFH1m2EOU/dxmAdguctVh3CsHWmAlPJQCaQjB+hN053YWGvcymbJgaqBTxXiRiMsgKwV3rvqmQpKUxMEpELI4F8YCWVneU2gZxYdYB5V1pqgRgOuHHD+Oin3jCcrtzVl5ev54CHvaDFYxk6AwsdZh/RVRlpClWlrGZgBoI7qXD6Lphft9ZtO331G91TC8L3OkFw+kdpxjsQoH5sVqWuRU7PybcR1SK0os+LmoD3c4clFgSY/x1/g2Gm8FJrLNd5koRvRgAlnTScwPuvkQxSpAIq1/1ztLVVK+UCCJWThV9wukRADziXl/XSgQXPD3ToU+dIucWtd7Y2amm3ejRZzU43ZTugkUdLxm1cqyblvVvPfdNhKQgAPp/YJI+FO2JO0SWUfQa+nh2g03FIhBL6zKj9fehTYrhizO8=
 addons:
   coverity_scan:
     project:
-      name: "tuxbox/matemonkey4j"
-      description: "Build submitted via Travis CI"
+      name: MateMonkey/matemonkey4j
+      description: Build submitted via Travis CI
     notification_email: iulius@sniggle.me
-    build_command_prepend: "mvn clean"
-    build_command:   "mvn -DskipTests=true compile"
+    build_command_prepend: mvn clean
+    build_command: mvn -DskipTests=true compile
     branch_pattern: coverity_scan
-
 before_install:
-  - pip install --user codecov
+- pip install --user codecov
 after_success:
-  - codecov
+- codecov
