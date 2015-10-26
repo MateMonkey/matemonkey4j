@@ -139,8 +139,6 @@ public final class DealerQueryBuilder implements Query {
       }
       builder.setLength(builder.length()-1);
       stringBuilder.append(builder);
-    }
-    if( stringBuilder.length() > 0 ) {
       stringBuilder.append('&');
     }
     if( !productIds.isEmpty() ) {
@@ -151,7 +149,9 @@ public final class DealerQueryBuilder implements Query {
       }
       builder.setLength(builder.length() - 1);
       stringBuilder.append(builder);
+      stringBuilder.append('&');
     }
+    stringBuilder.setLength(stringBuilder.length()-1);
     return stringBuilder.length() == 0 ? null : stringBuilder.toString();
   }
 }
