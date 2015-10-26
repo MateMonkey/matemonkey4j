@@ -6,9 +6,7 @@ This library strives to provide a light weight low dependency library to query M
 The only dependency is on Jackson in order to (de)serialize API requests and responses.
 
 ## Status
-[![Build Status](https://travis-ci.org/tuxbox/matemonkey4j.png?branch=master)](https://travis-ci.org/tuxbox/matemonkey4j)
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/6767/badge.svg)](https://scan.coverity.com/projects/tuxbox-matemonkey4j)
-[![codecov.io](https://codecov.io/github/tuxbox/matemonkey4j/coverage.svg?branch=master)](https://codecov.io/github/tuxbox/matemonkey4j?branch=master)
+* Removed until setup for MateMonkey repository
 
 ## License
 Short version: 3-clause BSD
