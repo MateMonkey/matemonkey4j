@@ -1,6 +1,5 @@
 package me.sniggle.matemonkey4j.api.model.result;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import me.sniggle.matemonkey4j.api.model.Address;
 import me.sniggle.matemonkey4j.api.model.Producer;
 import me.sniggle.matemonkey4j.api.model.Product;
@@ -12,7 +11,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 /**
- * Created by iulius on 22/10/15.
+ * @author tuxbox, sniggle.me
  */
 public class ProductResultBindingTest extends BaseAPIResultBindingTest<ProductResult> {
 
