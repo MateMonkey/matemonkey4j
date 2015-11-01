@@ -10,6 +10,9 @@ The only dependency is on Jackson in order to (de)serialize API requests and res
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/6780/badge.svg)](https://scan.coverity.com/projects/matemonkey-matemonkey4j)
 [![codecov.io](https://codecov.io/github/MateMonkey/matemonkey4j/coverage.svg?branch=master)](https://codecov.io/github/MateMonkey/matemonkey4j?branch=master)
 
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/me.sniggle/matemonkey4j/badge.svg)](https://maven-badges.herokuapp.com/maven-central/me.sniggle/matemonkey4j)
+
 ## License
 Short version: 3-clause BSD
 
